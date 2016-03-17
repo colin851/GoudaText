@@ -1,4 +1,4 @@
-$(function() {
+﻿$(function() {
 	var wait_load = $('.proPic');
 	load();
 	//跨浏览器获取视口大小
@@ -39,7 +39,7 @@ $(function() {
 	function load() {
 		for (var i = 0; i < wait_load.length; i++) {
 			var _this = wait_load.eq(i)[0];
-			if (getInner().height + getScroll().top >= offsetTop(_this)) {
+			if (getInner().height + getScroll().top + 200 >= offsetTop(_this)) {
 				$(_this).attr('src', $(_this).attr('data-src'));
 			}
 		}
